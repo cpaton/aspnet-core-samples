@@ -26,7 +26,6 @@ namespace SampleApp
                 var assemblyLocation = Assembly.GetExecutingAssembly().Location;
                 var assemblyFolder = Path.GetDirectoryName(assemblyLocation);
                 webHostBuilder.UseContentRoot(assemblyFolder);
-                Environment.CurrentDirectory = assemblyFolder;
 
                 webHostBuilder
                     .UseStartup<Startup>()
